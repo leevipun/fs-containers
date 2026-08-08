@@ -1,0 +1,30 @@
+leevi@Leevi-MacBook-Air fs-containers % docker exec -it todo-backend-redis-1 sh
+/data # KEYS
+sh: KEYS: not found
+/data # KEYS pattern
+sh: KEYS: not found
+/data # KEYS added_todos
+sh: KEYS: not found
+/data # KEYS added_todos
+sh: KEYS: not found
+/data # KEYS
+sh: KEYS: not found
+/data # KEYS *
+sh: KEYS: not found
+/data # KEYS added_todos
+sh: KEYS: not found
+/data # KEYS *added_todos*
+sh: KEYS: not found
+/data # redis-cli KEYS '*added_todos*'
+1) "added_todos"
+/data # redis_cli GET added_todos
+sh: redis_cli: not found
+/data # redis-cli GET added_todos
+"2"
+/data # redis-cli SET added_todos 9001
+OK
+/data # DEL added_todos
+sh: DEL: not found
+/data # redis-cli DEL added_todos
+(integer) 1
+/data # 
