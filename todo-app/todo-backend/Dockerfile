@@ -7,7 +7,7 @@ RUN npm ci
 
 COPY . .
 
-ENV port=3000
+ENV PORT=3000
 
 CMD ["npm", "run", "dev"]
 
